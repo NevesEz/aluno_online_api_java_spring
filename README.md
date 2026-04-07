@@ -3,7 +3,7 @@
 ## 📌 Descrição do Projeto
 
 Este projeto consiste em uma API REST desenvolvida em Java utilizando o framework Spring Boot.
-A aplicação tem como objetivo gerenciar alunos e professores, permitindo operações completas de CRUD (Create, Read, Update e Delete).
+A aplicação tem como objetivo gerenciar alunos e professores, permitindo operações completas de CRUD (Create, Read, Update e Delete). A API foi testada utilizando o Insomnia e os dados persistidos foram validados através do DBeaver.
 
 Este projeto foi desenvolvido como atividade acadêmica da disciplina de Java Spring.
 
