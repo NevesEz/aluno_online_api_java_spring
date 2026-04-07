@@ -79,7 +79,7 @@ src/
 ## 🧪 Testes no Insomnia
 
 ### Criar Aluno
-![criar aluno](./prints/insomnia_criar_aluno.png.png)
+![criar aluno](./prints/insomnia_criar_aluno.png)
 
 ### Buscar Alunos Por Id
 ![buscar alunos por id](./prints/insomnia_buscar_alunos_por_id.png)
