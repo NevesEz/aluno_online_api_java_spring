@@ -78,19 +78,24 @@ src/
 
 ## 🧪 Testes no Insomnia
 
-(ADICIONE AQUI OS PRINTS)
+![insomnia](.prints/insomnia_criar_aluno.png.png)
+![insomnia](.prints/insomnia_buscar_alunos_por_id.png)
+![insomnia](.prints/insomnia_listar_todos_alunos.png)
+![insomnia](.prints/insomnia_deletar_aluno_por_id.png)
+![insomnia](.prints/insomnia_atualizar_aluno_por_id.png)
 
-Exemplo:
-![Insomnia](./prints/insomnia.png)
+![insomnia](.prints/insomnia_criar_professor.png)
+![insomnia](.prints/insomnia_buscar_professor_por_id.png)
+![insomnia](.prints/insomnia_listar_todos_os_professores.png)
+![insomnia](.prints/insomnia_deletar_professor_por_id.png)
+![insomnia](.prints/insomnia_atualizar_professor_por_id.png)
 
 ---
 
 ## 🗄️ Banco de Dados
 
-(ADICIONE AQUI OS PRINTS)
-
-Exemplo:
-![DBeaver](./prints/dbeaver.png)
+![dbeaver](.prints/dbeaver_tabela_aluno.png)
+![dbeaver](.prints/dbeaver_tabela_professor.png)
 
 ---
 
