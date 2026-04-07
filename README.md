@@ -78,24 +78,45 @@ src/
 
 ## 🧪 Testes no Insomnia
 
-![insomnia](./prints/insomnia_criar_aluno.png.png)
-![insomnia](./prints/insomnia_buscar_alunos_por_id.png)
-![insomnia](./prints/insomnia_listar_todos_alunos.png)
-![insomnia](./prints/insomnia_deletar_aluno_por_id.png)
-![insomnia](./prints/insomnia_atualizar_aluno_por_id.png)
+### Criar Aluno
+![criar aluno](./prints/insomnia_criar_aluno.png.png)
 
-![insomnia](./prints/insomnia_criar_professor.png)
-![insomnia](./prints/insomnia_buscar_professor_por_id.png)
-![insomnia](./prints/insomnia_listar_todos_os_professores.png)
-![insomnia](./prints/insomnia_deletar_professor_por_id.png)
-![insomnia](./prints/insomnia_atualizar_professor_por_id.png)
+### Buscar Alunos Por Id
+![buscar alunos por id](./prints/insomnia_buscar_alunos_por_id.png)
+
+### Listar Todos Os Alunos
+![listar todos os alunos](./prints/insomnia_listar_todos_alunos.png)
+
+### Deletar Aluno Por Id
+![deletar aluno por id](./prints/insomnia_deletar_aluno_por_id.png)
+
+### Atualizar Aluno Por Id
+![atualizar aluno por id](./prints/insomnia_atualizar_aluno_por_id.png)
+
+### Criar Professor
+![criar professor](./prints/insomnia_criar_professor.png)
+
+### Buscar Professor Por Id
+![buscar professor por id](./prints/insomnia_buscar_professor_por_id.png)
+
+### Listar Todos Os Professores
+![listar todos os professores](./prints/insomnia_listar_todos_os_professores.png)
+
+### Deletar Professor Por Id
+![deletar professor por id](./prints/insomnia_deletar_professor_por_id.png)
+
+### Atualizar Professor Por Id
+![atualizar professor por id](./prints/insomnia_atualizar_professor_por_id.png)
 
 ---
 
 ## 🗄️ Banco de Dados
 
-![dbeaver](.prints/dbeaver_tabela_aluno.png)
-![dbeaver](.prints/dbeaver_tabela_professor.png)
+### Tabela Aluno
+![tabela aluno](./prints/dbeaver_tabela_aluno.png)
+
+### Tabela Professor
+![tabela professor](./prints/dbeaver_tabela_professor.png)
 
 ---
 
