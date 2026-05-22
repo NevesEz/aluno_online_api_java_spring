@@ -2,12 +2,17 @@ package br.com.alunoonline.api.service;
 
 import br.com.alunoonline.api.MatriculaAlunoStatusEnum;
 import br.com.alunoonline.api.dtos.AtualizarNotasRequestDTO;
+import br.com.alunoonline.api.dtos.DisciplinasAlunoResponseDTO;
+import br.com.alunoonline.api.dtos.HistoricoAlunoResponseDTO;
+import br.com.alunoonline.api.model.Aluno;
 import br.com.alunoonline.api.model.MatriculaAluno;
 import br.com.alunoonline.api.repository.MatriculaAlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class MatriculaAlunoService {
@@ -88,5 +93,51 @@ public class MatriculaAlunoService {
                     HttpStatus.BAD_REQUEST,
                     "Só é possível destrancar com status TRANCADO");
         }
+    }
+
+    public HistoricoAlunoResponseDTO emitirHistorico(Long alunoId) {
+
+        List<MatriculaAluno> matriculas =
+                matriculaAlunoRepository.findByAlunoId(alunoId);
+
+        if (matriculas.isEmpty()) {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "Nenhuma matrícula encontrada para esse aluno");
+        }
+
+        Aluno aluno = matriculas.get(0).getAluno();
+
+        List<DisciplinasAlunoResponseDTO> disciplinas =
+                new ArrayList<>();
+
+        for (MatriculaAluno matricula : matriculas) {
+            DisciplinasAlunoResponseDTO disc =
+                    new DisciplinasAlunoResponseDTO();
+
+            disc.setNomeDisciplina(matricula.getDisciplina().getNome());
+            disc.setNomeProfessor(
+                    matricula.getDisciplina().getProfessor().getNome());
+            disc.setNota1(matricula.getNota1());
+            disc.setNota2(matricula.getNota2());
+
+            if (matricula.getNota1() != null
+                && matricula.getNota2() != null) {
+                Double media = (matricula.getNota1()
+                              + matricula.getNota2()) / 2;
+                disc.setMedia(media);
+            }
+
+            disc.setStatus(matricula.getStatus());
+            disciplinas.add(disc);
+        }
+
+        HistoricoAlunoResponseDTO historico = new HistoricoAlunoResponseDTO();
+        historico.setNomeAluno(aluno.getNome());
+        historico.setEmailAluno(aluno.getEmail());
+        historico.setCpfAluno(aluno.getCpf());
+        historico.setDisciplinas(disciplinas);
+
+        return historico;
     }
 }

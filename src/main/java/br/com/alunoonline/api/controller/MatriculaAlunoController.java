@@ -1,6 +1,7 @@
 package br.com.alunoonline.api.controller;
 
 import br.com.alunoonline.api.dtos.AtualizarNotasRequestDTO;
+import br.com.alunoonline.api.dtos.HistoricoAlunoResponseDTO;
 import br.com.alunoonline.api.model.MatriculaAluno;
 import br.com.alunoonline.api.service.MatriculaAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,12 @@ public class MatriculaAlunoController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void destrancarMatricula(@PathVariable Long id) {
         matriculaAlunoService.destrancarMatricula(id);
+    }
+
+    @GetMapping("/emitir_historico/{alunoId}")
+    @ResponseStatus(HttpStatus.OK)
+    public HistoricoAlunoResponseDTO emitirHistorico(
+            @PathVariable Long alunoId) {
+        return matriculaAlunoService.emitirHistorico(alunoId);
     }
 }
