@@ -227,3 +227,52 @@ EXECUTE FUNCTION public.registrar_novo_professor();
 SELECT *
 FROM public.historico_novos_professores
 ORDER BY id DESC;
+
+
+
+-- trigger que armazena em uma tabela a data, hora e o id das matriculas destrancadas.
+CREATE TABLE IF NOT EXISTS public.historico_matriculas_destrancadas (
+  id SERIAL PRIMARY KEY,
+  matricula_id INTEGER NOT NULL,
+  data_destrancamento DATE NOT NULL,
+  hora_destrancamento TIME NOT NULL
+);
+
+
+CREATE OR REPLACE FUNCTION public.registrar_matricula_destrancada()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF UPPER(TRIM(OLD.status::TEXT)) = 'TRANCADO'
+     AND UPPER(TRIM(NEW.status::TEXT)) = 'MATRICULADO' THEN
+
+    INSERT INTO public.historico_matriculas_destrancadas (
+      matricula_id,
+      data_destrancamento,
+      hora_destrancamento
+    )
+    VALUES (
+      NEW.id,
+      CURRENT_DATE,
+      CURRENT_TIME
+    );
+
+  END IF;
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+
+DROP TRIGGER IF EXISTS trg_registrar_matricula_destrancada
+ON public.matricula_aluno;
+
+CREATE TRIGGER trg_registrar_matricula_destrancada
+AFTER UPDATE OF status
+ON public.matricula_aluno
+FOR EACH ROW
+EXECUTE FUNCTION public.registrar_matricula_destrancada();
+
+
+SELECT *
+FROM public.historico_matriculas_destrancadas
+ORDER BY id DESC;

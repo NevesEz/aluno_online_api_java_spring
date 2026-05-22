@@ -32,4 +32,10 @@ public class MatriculaAlunoController {
                                @RequestBody AtualizarNotasRequestDTO dto) {
         matriculaAlunoService.atualizarNotas(id, dto);
     }
+
+    @PatchMapping("/destrancar/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void destrancarMatricula(@PathVariable Long id) {
+        matriculaAlunoService.destrancarMatricula(id);
+    }
 }

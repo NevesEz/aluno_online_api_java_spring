@@ -72,4 +72,21 @@ public class MatriculaAlunoService {
                     "Só é possível trancar com status MATRICULADO");
         }
     }
+
+    public void destrancarMatricula(Long id) {
+
+        MatriculaAluno matriculaAluno = matriculaAlunoRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
+        if (matriculaAluno.getStatus()
+                .equals(MatriculaAlunoStatusEnum.TRANCADO)) {
+            matriculaAluno.setStatus(
+                    MatriculaAlunoStatusEnum.MATRICULADO);
+            matriculaAlunoRepository.save(matriculaAluno);
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Só é possível destrancar com status TRANCADO");
+        }
+    }
 }
