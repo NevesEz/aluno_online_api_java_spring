@@ -35,27 +35,27 @@ Este projeto foi desenvolvido como atividade acadêmica da disciplina de Java Sp
 
 O projeto segue o padrão de arquitetura em camadas (Layered Architecture), promovendo organização, reutilização de código e separação de responsabilidades.
 
-###🔹 Controller
+🔹 Controller
 
 Responsável por receber as requisições HTTP, processar endpoints REST e retornar as respostas da API.
 
-###🔹 Service
+🔹 Service
 
 Responsável pelas regras de negócio da aplicação e tratamento das operações.
 
-###🔹 Repository
+🔹 Repository
 
 Responsável pela comunicação com o banco de dados através do Spring Data JPA.
 
-###🔹 Model
+🔹 Model
 
 Representa as entidades do sistema e seus relacionamentos.
 
-### 🔹 DTO
+ 🔹 DTO
 
 Responsável pela transferência de dados entre as camadas da aplicação, evitando exposição direta das entidades.
 
-###🔹 Database
+🔹 Database
 
 Banco de dados PostgreSQL contendo:
 
@@ -106,11 +106,11 @@ O projeto utiliza o PostgreSQL como banco de dados principal.
 
 Além das tabelas relacionais, foram implementados:
 
-###🔹 Views
+🔹 Views
 
 Utilizadas para facilitar consultas acadêmicas e relatórios.
 
-###🔹 Triggers
+🔹 Triggers
 
 Responsáveis por automatizar comportamentos no banco de dados, garantindo maior integridade e automação.
 
