@@ -108,15 +108,51 @@ src/
 ### Atualizar Professor Por Id
 ![atualizar professor por id](./prints/insomnia_atualizar_professor_por_id.png)
 
+### Criar Disciplina
+![criar disciplina](./prints/insomnia_criar_disciplina.png)
+
+### Listar Todas Disciplinas
+![listar todas disciplinas](./prints/insomnia_listar_todas_disciplinas.png)
+
+### Buscar Disciplina Por Id
+![buscar disciplina por id](./prints/insomnia_buscar_disciplina_por_id.png)
+
+### Deletar Disciplina Por Id
+![deletar disciplina por id](./prints/insomnia_deletar_disciplina_por_id.png)
+
+### Atualizar Disciplina Por Id
+![atualizar disciplina por id](./prints/insomnia_atualizar_disciplina_por_id.png)
+
+### Criar Matricula
+![criar matricula](./prints/insomnia_criar_matricula.png)
+
+### Trancar Matricula Por Id
+![trancar matricula por id](./prints/insomnia_trancar_matricula_por_id.png)
+
+### Atualizar Notas Por Id
+![atualizar notas por id](./prints/insmonia_atualizar_notas_por_id.png)
+
+### Destrancar Matricula Por Id
+![destrancar matricula por id](./prints/insomnia_destrancar_matricula_por_id.png)
+
+### Emitir Historico Por Id
+![emitir historico por id](./prints/insomnia_emitir_historico_por_id.png)
+
 ---
 
 ## 🗄️ Banco de Dados
 
 ### Tabela Aluno
-![tabela aluno](./prints/dbeaver_tabela_aluno.png)
+![tabela aluno](./prints/dbeaver_tabela_aluno_new.png)
 
 ### Tabela Professor
-![tabela professor](./prints/dbeaver_tabela_professor.png)
+![tabela professor](./prints/dbeaver_tabela_professor_new.png)
+
+### Tabela Disciplina
+![tabella disciplina](./prints/dbeaver_tabela_disciplina.png)
+
+### Tabela Matricula Aluno
+![tabela matricula aluno](./prints/dbeaver_tabela_matricula_aluno.png)
 
 ---
 
