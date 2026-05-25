@@ -78,9 +78,9 @@ src/
       ├── application.properties
       └── database
 
----
+```
 
-🔗 Relacionamentos JPA
+## 🔗 Relacionamentos JPA
 
 O projeto utiliza relacionamentos entre entidades através do JPA/Hibernate.
 
