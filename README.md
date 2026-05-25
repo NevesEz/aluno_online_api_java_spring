@@ -130,7 +130,7 @@ src/
 ![trancar matricula por id](./prints/insomnia_trancar_matricula_por_id.png)
 
 ### Atualizar Notas Por Id
-![atualizar notas por id](./prints/insmonia_atualizar_notas_por_id.png)
+![atualizar notas por id](./prints/insomnia_atualizar_notas_por_id.png)
 
 ### Destrancar Matricula Por Id
 ![destrancar matricula por id](./prints/insomnia_destrancar_matricula_por_id.png)
