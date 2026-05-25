@@ -77,7 +77,6 @@ src/
  └── resources
       ├── application.properties
       └── database
-      
 ---
 
 🔗 Relacionamentos JPA
