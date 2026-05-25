@@ -64,7 +64,7 @@ Banco de dados PostgreSQL contendo:
 * Triggers SQL
 * constraints e relacionamentos
 
----
+```
 
 📂 Estrutura do Projeto
 src/
@@ -77,8 +77,8 @@ src/
  └── resources
       ├── application.properties
       └── database
-```
 
+---
 
 🔗 Relacionamentos JPA
 
